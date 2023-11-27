@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="images/dragonfire_ball_logo.png" alt="DragonFire Ball Logo" width="200" style="border-radius: 50%;"/>
+  <img src="images/thomas-scaredy-cat-logo.png" alt="DragonFire Ball Logo" width="200" style="border-radius: 50%;"/>
 </p>
 
-# thomas the scaredy cat
+<h1 align="center">thomas the scaredy cat</h1>
+
 
 ## Game Description
 
