@@ -34,7 +34,7 @@ The game is built to support multiple platforms, including:
 Below is the project structure outlining the various directories and their contents:
 
 ```
-DragonFireBall/
+Thomas-The-Scaredy-Cat/
 ├── Assets/
 │   ├── Animation/
 │   ├── Audio/
