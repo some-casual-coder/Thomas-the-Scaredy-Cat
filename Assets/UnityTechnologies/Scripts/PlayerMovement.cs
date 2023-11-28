@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     float timer = 0.0f;
     Animator m_Animator;
     Rigidbody m_Rigidbody; // will be used to apply mvmt and rotation to character since the character needs to be part of the physics system
+    AudioSource m_AudioSource;
     Vector3 m_Movement;
     //Quaternions are a way of storing rotations
     Quaternion m_Rotation = Quaternion.identity;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         m_Animator = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     // Use FixedUpdate for physics and Update for rendering
