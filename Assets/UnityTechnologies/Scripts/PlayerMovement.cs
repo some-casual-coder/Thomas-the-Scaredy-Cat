@@ -36,22 +36,21 @@ public class PlayerMovement : MonoBehaviour
         bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
         bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
-        m_Animator.SetBool("IsWalking", isWalking);
 
-
-
-        if (isWalking)
+        if (!isWalking)
         {
-            if (!m_AudioSource.isPlaying)
+            timer += Time.deltaTime;
+            if (timer >= idleTime)
             {
-                m_AudioSource.Play();
+                m_Animator.SetBool("IsWalking", false);
+                timer = 0f;
             }
         }
         else
         {
-            m_AudioSource.Stop();
+            m_Animator.SetBool("IsWalking", true);
+            timer = 0f;
         }
-
 
         // transform towards the movement variable changing by angle turnspeed ... with magnitude of 0
         // Time.delta_time is the time since the previous frame: time between frames
