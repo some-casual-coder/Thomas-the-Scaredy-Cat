@@ -124,6 +124,14 @@
 -define:NMC_CAN_ACCESS_TERRAIN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/AsyncIO.dll"
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/Meryel.UnityCodeAssist.SynchronizerModel.dll"
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/Meryel.UnityCodeAssist.YamlDotNet.dll"
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/NaCl.dll"
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/NetMQ.dll"
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/Serilog.dll"
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/Serilog.Sinks.PersistentFile.dll"
+-r:"Assets/Plugins/CodeAssist/Editor/ExternalReferences/System.Runtime.CompilerServices.Unsafe.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"

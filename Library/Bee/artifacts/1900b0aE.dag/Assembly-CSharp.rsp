@@ -422,6 +422,7 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/Timer.cs"
 "Assets/UnityTechnologies/Scripts/GameEnding.cs"
 "Assets/UnityTechnologies/Scripts/LightFlicker.cs"
 "Assets/UnityTechnologies/Scripts/Observer.cs"

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meryel.CodeAssist.Editor", "Meryel.CodeAssist.Editor.csproj", "{04445DEF-0631-4998-67C3-F61E993A30BB}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{91B54A0A-9988-84A0-4745-1EC4E466B6DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{B3A1AED6-D6C8-3297-8974-68F47C32B325}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04445DEF-0631-4998-67C3-F61E993A30BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04445DEF-0631-4998-67C3-F61E993A30BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04445DEF-0631-4998-67C3-F61E993A30BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04445DEF-0631-4998-67C3-F61E993A30BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{91B54A0A-9988-84A0-4745-1EC4E466B6DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91B54A0A-9988-84A0-4745-1EC4E466B6DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91B54A0A-9988-84A0-4745-1EC4E466B6DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
