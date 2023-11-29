@@ -13,15 +13,14 @@ MonoBehaviour:
   m_Name: Readme
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: 6756ed7b80223ac4e8f026ce27541de4, type: 3}
-  title: 'John Lemon''s Haunted Jaunt: 3D Beginner'
+  title: 'Thomas the Scaredy Cat'
   sections:
   - heading: 
-    text: This is the completed version of the 3D Beginner Tutorial series.
-    linkText: Find the tutorial on the Unity Learn site here
-    url: https://learn.unity.com/project/john-lemon-s-haunted-jaunt-3d-beginner
+    text: Thomas the Scaredy Cat is a 3D game that follows the journey of Thomas,
+    a timid cat, as he ventures through a haunted house filled with frightening obstacles.
   - heading: 
-    text: To follow along with this tutorial, you will need to download the starter
-      assets.
-    linkText: 'Find the Tutorial Resources pack on the Asset Store here:'
-    url: http://u3d.as/1vgD
+    text: Players must guide Thomas through the spooky surroundings,
+    overcoming challenges and facing their fears to successfully escape the haunted house.
+    linkText: 'Github Repo:'
+    url: https://github.com/some-casual-coder/Thomas-the-Scaredy-Cat
   loadedLayout: 1
