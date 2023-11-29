@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     void Update()
     {
         elapsedTime += Time.deltaTime;
-        timerText.text = elapsedTime.ToString();
+        int minutes = Mathf.FloorToInt(elapsedTime / 60);
+        int seconds = Mathf.FloorToInt(elapsedTime % 60);
+        timerText.text = string.Format("{0:00}:{1:00}",minutes,seconds);
     }
 }
