@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditor
     Assembly-CSharp.dll:
     - AnimatorFunctions
     - GameEnding
@@ -9,9 +7,11 @@ ScriptsOnlyBuild:
     - LevelSelector
     - LightFlicker
     - MainMenu
+    - MenuButtonController
     - Observer
+    - PauseMenu
     - PlayerMovement
-    - Readme
+    - Scores
     - Timer
     - WaypointPatrol
     Cinemachine.dll:
@@ -39,6 +39,8 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.PostProcessVolume
     - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
     - UnityEngine.Rendering.PostProcessing.Vignette
+    Unity.Recorder.Editor.dll:
+    - UnityEditor.Recorder.RecorderPreferencesSettings
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -75,30 +77,13 @@ ScriptsOnlyBuild:
     Unity.RenderPipelines.Universal.Editor.dll:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.RenderPipelines.Universal.Runtime.dll:
-    - UnityEngine.Rendering.Universal.Bloom
-    - UnityEngine.Rendering.Universal.ChannelMixer
-    - UnityEngine.Rendering.Universal.ChromaticAberration
-    - UnityEngine.Rendering.Universal.ColorAdjustments
-    - UnityEngine.Rendering.Universal.ColorCurves
-    - UnityEngine.Rendering.Universal.ColorLookup
-    - UnityEngine.Rendering.Universal.DepthOfField
-    - UnityEngine.Rendering.Universal.FilmGrain
-    - UnityEngine.Rendering.Universal.LensDistortion
-    - UnityEngine.Rendering.Universal.LiftGammaGain
-    - UnityEngine.Rendering.Universal.MotionBlur
-    - UnityEngine.Rendering.Universal.PaniniProjection
     - UnityEngine.Rendering.Universal.PostProcessData
     - UnityEngine.Rendering.Universal.ScreenSpaceAmbientOcclusion
-    - UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
-    - UnityEngine.Rendering.Universal.SplitToning
-    - UnityEngine.Rendering.Universal.Tonemapping
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalAdditionalLightData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
     - UnityEngine.Rendering.Universal.UniversalRendererData
-    - UnityEngine.Rendering.Universal.Vignette
-    - UnityEngine.Rendering.Universal.WhiteBalance
     - UnityEngine.Rendering.Universal.XRSystemData
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -127,8 +112,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -158,6 +145,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.Shadow
   serializedClasses:
     Cinemachine:
     - Cinemachine.CinemachineBlendDefinition
@@ -295,45 +283,126 @@ ScriptsOnlyBuild:
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
     methodName: PlayGame
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelSelector
+    methodName: SelectLevel
   - assembly: Assembly-CSharp
     fullTypeName: MainMenu
     methodName: QuitGame
   - assembly: Assembly-CSharp
     fullTypeName: LevelSelector
     methodName: SelectLevel
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: LevelSelector
     methodName: SelectLevel
   - assembly: Assembly-CSharp
-    fullTypeName: LevelSelector
-    methodName: SelectLevel
+    fullTypeName: Scores
+    methodName: LoadMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: Restart
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: LoadMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: NextGame
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Resume
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Pause
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Resume
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: Restart
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: LoadMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: NextGame
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: LoadMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Pause
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: Restart
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: LoadMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Resume
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Scores
+    methodName: NextGame
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: LoadMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Pause
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   sceneClasses:
     Assets/Scenes/IntroScene.unity:
     - Class: 1
@@ -540,11 +609,15 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 16944}
+    - Class: 114
       Script: {instanceID: 16946}
     - Class: 114
       Script: {instanceID: 16988}
     - Class: 114
       Script: {instanceID: 17106}
+    - Class: 114
+      Script: {instanceID: 17192}
     - Class: 114
       Script: {instanceID: 17498}
     - Class: 114
@@ -570,6 +643,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22420}
     - Class: 114
+      Script: {instanceID: 23034}
+    - Class: 114
       Script: {instanceID: 23522}
     - Class: 114
       Script: {instanceID: 23728}
@@ -581,6 +656,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 24252}
     - Class: 114
       Script: {instanceID: 24590}
+    - Class: 114
+      Script: {instanceID: 25028}
     - Class: 114
       Script: {instanceID: 25126}
     - Class: 114
@@ -594,6 +671,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 26504}
     - Class: 114
+      Script: {instanceID: 26736}
+    - Class: 114
       Script: {instanceID: 26954}
     - Class: 114
       Script: {instanceID: 27924}
@@ -601,6 +680,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 28190}
     - Class: 114
       Script: {instanceID: 28606}
+    - Class: 114
+      Script: {instanceID: 42534}
+    - Class: 114
+      Script: {instanceID: 42544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -689,11 +772,15 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 16944}
+    - Class: 114
       Script: {instanceID: 16946}
     - Class: 114
       Script: {instanceID: 16988}
     - Class: 114
       Script: {instanceID: 17106}
+    - Class: 114
+      Script: {instanceID: 17192}
     - Class: 114
       Script: {instanceID: 17498}
     - Class: 114
@@ -719,6 +806,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22420}
     - Class: 114
+      Script: {instanceID: 23034}
+    - Class: 114
       Script: {instanceID: 23522}
     - Class: 114
       Script: {instanceID: 23728}
@@ -730,6 +819,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 24252}
     - Class: 114
       Script: {instanceID: 24590}
+    - Class: 114
+      Script: {instanceID: 25028}
     - Class: 114
       Script: {instanceID: 25126}
     - Class: 114
@@ -743,6 +834,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 26504}
     - Class: 114
+      Script: {instanceID: 26736}
+    - Class: 114
       Script: {instanceID: 26954}
     - Class: 114
       Script: {instanceID: 27924}
@@ -750,6 +843,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 28190}
     - Class: 114
       Script: {instanceID: 28606}
+    - Class: 114
+      Script: {instanceID: 42534}
+    - Class: 114
+      Script: {instanceID: 42544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -838,11 +935,15 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 16944}
+    - Class: 114
       Script: {instanceID: 16946}
     - Class: 114
       Script: {instanceID: 16988}
     - Class: 114
       Script: {instanceID: 17106}
+    - Class: 114
+      Script: {instanceID: 17192}
     - Class: 114
       Script: {instanceID: 17498}
     - Class: 114
@@ -868,6 +969,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22420}
     - Class: 114
+      Script: {instanceID: 23034}
+    - Class: 114
       Script: {instanceID: 23522}
     - Class: 114
       Script: {instanceID: 23728}
@@ -879,6 +982,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 24252}
     - Class: 114
       Script: {instanceID: 24590}
+    - Class: 114
+      Script: {instanceID: 25028}
     - Class: 114
       Script: {instanceID: 25126}
     - Class: 114
@@ -892,6 +997,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 26504}
     - Class: 114
+      Script: {instanceID: 26736}
+    - Class: 114
       Script: {instanceID: 26954}
     - Class: 114
       Script: {instanceID: 27924}
@@ -899,6 +1006,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 28190}
     - Class: 114
       Script: {instanceID: 28606}
+    - Class: 114
+      Script: {instanceID: 42534}
+    - Class: 114
+      Script: {instanceID: 42544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1109,7 +1220,7 @@ ScriptsOnlyBuild:
     className: CinemachineTriggerAction
   - hash:
       serializedVersion: 2
-      Hash: 1af05db3fe0b3bec74a6cb833246255c
+      Hash: ae30e188d0a43d41cdc7d7dab5c48264
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: AnimatorFunctions
@@ -1157,7 +1268,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerObjectPopupField
   - hash:
       serializedVersion: 2
-      Hash: e6e3cbf26df6429ac265a9100107180c
+      Hash: ef7b443a4ec67ef9fb737d3b2571d0f3
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameEnding
@@ -1187,7 +1298,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
-      Hash: 696581f65d25fcca01d780dfd3054d2c
+      Hash: f7ea7047f7b9fc75e1e502a51e4892fa
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Timer
@@ -3243,6 +3354,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Scores
+  - hash:
+      serializedVersion: 2
+      Hash: a78fd4fdd5e203b3974c6af95bf04dd9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PauseMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/IntroScene.unity
