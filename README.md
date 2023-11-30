@@ -17,7 +17,6 @@
 
 - **Obstacles:** There are various scary obstacles, such as ghosts and gargoyles, to test Thomas's courage and challenge players as they navigate through the haunted house.
 
-- - **Levels:** The user can also change the difficulty of the game by opting to choose the different levels.
 
 ## Development Stack
 
