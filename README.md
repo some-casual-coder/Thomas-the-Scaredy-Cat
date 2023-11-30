@@ -17,6 +17,8 @@
 
 - **Obstacles:** There are various scary obstacles, such as ghosts and gargoyles, to test Thomas's courage and challenge players as they navigate through the haunted house.
 
+- - **Levels:** The user can also change the difficulty of the game by opting to choose the different levels.
+
 ## Development Stack
 
 - [**Unity Hub (version 2022 LTS)**](https://unity.com/download): The main platform for developing the game. [Access Unity Hub]
@@ -29,6 +31,9 @@ The game is built to support multiple platforms, including:
 - Android
 - WebGL
 - iOS
+- Windows
+- Linux
+- MacOS
 
 ## Project Structure
 Below is the project structure outlining the various directories and their contents:
