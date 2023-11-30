@@ -430,6 +430,7 @@
 "Assets/UnityTechnologies/Scripts/Observer.cs"
 "Assets/UnityTechnologies/Scripts/PauseMenu.cs"
 "Assets/UnityTechnologies/Scripts/PlayerMovement.cs"
+"Assets/UnityTechnologies/Scripts/Scores.cs"
 "Assets/UnityTechnologies/Scripts/WaypointPatrol.cs"
 "Assets/UnityTechnologies/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
