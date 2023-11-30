@@ -31,6 +31,9 @@ The game is built to support multiple platforms, including:
 - Android
 - WebGL
 - iOS
+- Windows
+- Linux
+- MacOS
 
 ## Project Structure
 Below is the project structure outlining the various directories and their contents:
