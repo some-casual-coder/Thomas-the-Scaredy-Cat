@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 20f;
-    float idleTime = 0.4f;
-    float timer = 0.0f;
+    //float idleTime = 0.4f;
+    //float timer = 0.0f;
     Animator m_Animator;
     Rigidbody m_Rigidbody; // will be used to apply mvmt and rotation to character since the character needs to be part of the physics system
     AudioSource m_AudioSource;

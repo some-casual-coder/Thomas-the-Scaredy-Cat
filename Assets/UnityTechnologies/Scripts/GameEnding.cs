@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameEnding : MonoBehaviour
-{
+{ 
+    [SerializeField] TextMeshProUGUI outputScore;
     public float fadeDuration = 1f;
     public float displayImageDuration = 1f;
     public GameObject player;
@@ -12,7 +14,8 @@ public class GameEnding : MonoBehaviour
     public AudioSource exitAudio;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
     public AudioSource caughtAudio;
-
+    public GameObject score;
+    public Timer playerTimer;
 
     bool m_IsPlayerAtExit;
     bool m_IsPlayerCaught;
@@ -24,6 +27,8 @@ public class GameEnding : MonoBehaviour
         if(other.gameObject == player)
         {
             m_IsPlayerAtExit = true;
+            playerTimer.halt();
+            outputScore.text = playerTimer.getScore();
         }
     }
 
@@ -58,12 +63,14 @@ public class GameEnding : MonoBehaviour
         {
             if (doRestart)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
             else
             {
-                Application.Quit();
+                imageCanvasGroup.alpha = 0f;
+                score.SetActive(true);
+                //Application.Quit();
             }
         }
     }
