@@ -362,6 +362,7 @@
 "Assets/UnityTechnologies/Scripts/AnimatorFunctions.cs"
 "Assets/UnityTechnologies/Scripts/GameEnding.cs"
 "Assets/UnityTechnologies/Scripts/IntroController.cs"
+"Assets/UnityTechnologies/Scripts/LevelSelector.cs"
 "Assets/UnityTechnologies/Scripts/LightFlicker.cs"
 "Assets/UnityTechnologies/Scripts/MainMenu.cs"
 "Assets/UnityTechnologies/Scripts/MenuButtonController.cs"
